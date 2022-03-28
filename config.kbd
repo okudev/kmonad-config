@@ -46,13 +46,3 @@ allow-cmd false
   _     @udo @cut @cpy  pgdn  @pst _   bks tab  lsft lctl comp _
   _        _    _              ret            _    _    _    _
 )
-
-
-(deflayer empty
-  _        _    _    _    _    _    _    _    _    _    _    _    _    
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _
-  _        _    _    _    _    _    _    _    _    _    _    _    _ 
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _ 
-  _    _     _    _    _    _    _    _    _    _    _    _    _ 
-  _        _    _              _              _    _    _    _
-)
