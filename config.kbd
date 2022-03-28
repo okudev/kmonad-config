@@ -38,15 +38,6 @@ allow-cmd false
   lctl     lmet lalt           spc            ralt rmet _    _
 )
 
-(deflayer colemak-dhk
-  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv      1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab      q    w    f    p    b    j    l    u    y    ;    [    ]
-  @ext     a    r    s    t    g    k    n    e    i    o    '    \\   ret
-  lsft  z    x    c    d    v    102d m    h    ,    .    /    rsft
-  lctl     lmet lalt           spc            ralt rmet _    _
-)
-
 (deflayer extend
   _        play rewind previoussong nextsong ejectcd refresh brdn brup www mail prog1 prog2
   _        f1   f2   f3   f4   f5   f6   f7   f8   f9  f10   f11  f12  _
