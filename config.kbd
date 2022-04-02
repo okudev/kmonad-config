@@ -5,15 +5,6 @@ fallthrough true
 allow-cmd false
 )
 
-(defsrc
-  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    e    r    t    y    u    i    o    p    [    ]
-  caps    a    s    d    f    g    h    j    k    l    ;    '    \   ret
-  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl    lmet lalt           spc            ralt rmet cmp  rctl
-)
- 
 (defalias
   ext  (layer-toggle extend) ;; Bind 'ext' to the Extend Layer
 )
@@ -23,26 +14,32 @@ allow-cmd false
   pst C-v
   cut C-x
   udo C-z
-  all C-a
+  all C-agit 
   fnd C-f
   bk Back
   fw Forward
 )
 
+(defsrc
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  caps   a    s    d    f    g    h    j    k    l    ;    '    102d    102d
+  lsft \   z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt              spc         ralt rmet cmp rctl
+)
+
 (deflayer colemak-dh
-  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12   
-  grv      1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab      q    w    f    p    b    j    l    u    y    ;    [    ]
-  @ext     a    r    s    t    g    m    n    e    i    o    '    \\   ret
-  lsft  z    x    c    d    v    102d k    h    ,    .    /    rsft
-  lctl     lmet lalt           spc            ralt rmet _    _
+  esc     1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab     q    w    f    p    b    j    l    u    y    ;    [    ]    ret
+  @ext    a    r    s    t    g    m    n    e    i    o    '    _    _
+  lsft  z    x    c    d    v   bksl  k    h    ,    .    /    rsft
+  lctl lmet lalt              spc         ralt rmet cmp rctl
 )
 
 (deflayer extend
-  _        play rewind previoussong nextsong ejectcd refresh brdn brup www mail prog1 prog2
-  _        f1   f2   f3   f4   f5   f6   f7   f8   f9  f10   f11  f12  _
-  _        menu  @bk  @fnd @fw  ins  pgup home up   end  esc prnt slck
-  _        lalt lmet lsft lctl ralt pgdn lft  down rght bspc  caps _    _
-  _     @udo @cut @cpy  pgdn  @pst _   bks tab  lsft lctl comp _
-  _        _    _              ret            _    _    _    _
+  -     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  -     menu @bk  @fnd @fw  ins  pgup home up   end  esc  prnt slck _
+  -     lalt lmet lshft lctl ralt pgdn lft  down rght bspc caps _    _   
+  -  @udo @cut @cpy pgdn @pst _    bks  tab  lsft lctl comp _   
+  -    _    _         ret         _    _    _    _
 )
